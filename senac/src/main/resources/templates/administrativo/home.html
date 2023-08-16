@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html 
+xmlns:th="https://thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></linkrel>
+    <link rel="stylesheet" href="estilo,css">
+</head>
+
+
+
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <a class="navbar-brand" href="#"><img src="data:image/jpeg;base64,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" alt="" width="66" height="60"
+          style="border-radius: 15px;">
+          
+          BRASILEIRÃO ASSAÍ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Desativado</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
+
+        <div class="container-fluid">
+
+
+        <h1></h1>
+
+        <div class="row">
+        <div class="col-                                           md-3 menuLateral" >
+          <ul class="list-group">
+                   
+            <a href="/cadastroFuncionario" class="list-group-item"> Cadastrar Funcionario     </a>
+            <a href="/cadastroProduto" class="list-group-item"> Cadastrar produto         </a>
+            <a href="/cadastroCliente" class="list-group-item"> Cadastrar Cliente
+            <a href="/cadastroFornecedor" class="list-group-item"> Cadastrar Fornecedor
+            <a href="/cadastroCidade" class="list-group-item"> Cadastar Cidade           </a>
+            <a href="/cadastroEstado" class="list-group-item"> Cadastrar estado          </a>
+              <a href="/cadastroVenda" class="list-group-item"> Cadartrar venda          </a>
+            <a href="#" class="list-group-item active"> <i>
+             	
+           
+            <a href="/listarFuncionario" class="list-group-item"> Listar Funcionarios       </a>
+            <a href="/listarCliente" class="list-group-item"> Listar Cliente          </a>
+              <a href="/listarFornecedor" class="list-group-item"> Listar Fornecedor
+            <a href="/listarProduto" class="list-group-item"> Listar produtos           </a>
+            <a href="/listarCidade" class="list-group-item"> Listar Cidaade            </a>
+            <a href="/listarEstado" class="list-group-item"> Listar Estado  </a>
+           <a href="/listarVenda" class="list-group-item"> Listar Venda </a>
+          </ul>
+
+          
+        </div>
+
+        <div class="col-md-9">
+        
+        <div class="row">
+          <div class="col-md-3">  
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">EFETUAR VENDAS</h5>
+                
+                <a href="#" class="btn btn-primary">ENTRAR</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3"> 
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title"> VIZUALIZAR VENDA</h5>
+                
+                <a href="#" class="btn btn-primary">ENTRAR</a>
+              </div>
+            </div> </div>
+
+          <div class="col-md-3">  
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">ENTRADA DE PRODUTO</h5>
+                
+                <a href="#" class="btn btn-primary">ENTRAR</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3"> 
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">VIZUALIZA ENTRADA DE PRODUTOS</h5>
+                
+                <a href="#" class="btn btn-primary">ENTAR</a>
+              </div>
+            </div></div>
+
+            </div>
+
+          </div>
+        </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+
+.menuLateral{
+    margin-top: 5px;
+    margin-left: -15px;
+}
+.tamanhoImg{
+
+ width: 150px;
+
+ height: 200px;
+}
+
+
+
+</style>
+
+
+
+</body>
+
+</html>
